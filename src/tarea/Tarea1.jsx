@@ -12,13 +12,14 @@ import React from "react";
 
 */
 
-const Tarea1 = ({ nombre, apellido, edad, expectativas }) => {
+const Tarea1 = ({ nombre, apellido, edad, expectativas, profesion }) => {
   return (
     <div>
       <h1>{nombre}</h1>
       <h1>{apellido}</h1>
-      <h1>{edaddes}</h1>
-      <h1>{expectativas_de_Vida}</h1>
+      <h1>{edad}</h1>
+      <h1>{expectativas}</h1>
+      <h1>{profesion}</h1>
     </div>
   );
 };
