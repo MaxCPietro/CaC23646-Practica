@@ -1,7 +1,6 @@
 import React from "react";
 
 /* 
-
     Crear una card de presentación que reciba por props los siguientes datos:
 
     - Nombre
@@ -9,7 +8,6 @@ import React from "react";
     - Edad
 
     - Expectativas de la cursada
-
 */
 
 const Tarea1 = ({ nombre, apellido, edad, expectativas, profesion }) => {
