@@ -6,7 +6,7 @@ const AddTaskForm = ({agregar, tarea, captura}) => {
       <input
         name="nameNewTask"
         type="text"
-        value={tarea.nameNewTask}
+        value={tarea}
         onChange={captura}
         />
       <button type="submit">Agregar Tarea</button>
