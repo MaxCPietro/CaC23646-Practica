@@ -2,11 +2,11 @@ import React from 'react'
 import {useState} from "react"
 
 const AddTaskForm = ({onSubmitted} = (tareaNueva) => {}) => {
-  //Form Entry New Task
-  const [newTask,setNewTask] = useState({nameNewTask: ""});
+  //useState para una nueva tarea
+  const [newTask,setNewTask] = useState({nameNewTask: ""}); //nameNewTask es el array donde se guarda la nueva tarea (id. title)
   
    //Captura de nueva Tarea
-   const handleChange = (e) => {
+  const handleChange = (e) => {
     //desestructura el evento y captura la entrada de datos
     const {name,value} = e.target;
     setNewTask({
@@ -15,21 +15,15 @@ const AddTaskForm = ({onSubmitted} = (tareaNueva) => {}) => {
     });
   };
 
-  //Nuevas Tareas
-  //1- Creacion de Tarea Nueva
-  
+  //limpieza del formulario
+  const resetForm = () => setNewTask({nameNewTask: ""});
 
-    //2-limpieza del formulario
-    const resetForm = () => setNewTask({nameNewTask: ""});
-
-    //Agregado de Tarea Nueva al listado de tareas
-    const handleSubmit = (e) => {
+  //Agregado de Tarea Nueva al listado de tareas
+  const handleSubmit = (e) => {
     e.preventDefault();
-    //limpieza del formulario
+    onSubmitted(newTask); //acá le paso por callback la nueva tarea al componente padre
     resetForm();
-    onSubmitted(newTask)
-
-    };
+  };
 
   return (
     <form onSubmit={handleSubmit}>

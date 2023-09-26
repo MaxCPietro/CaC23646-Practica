@@ -21,6 +21,7 @@ const [nuevoTexto, setNuevoTexto] = useState(tarea);
   const handleInputChange = (e) => {
     e.preventDefault();
     setNuevoTexto(e.target.value);
+    console.log(e.target.value);
   };
 
   return (
