@@ -5,16 +5,16 @@ import React from "react";
 //import ReelCartas from "./tareas/ReelCartas";
 import ToDoViewPpal from "./toDoProject/toDoViews/ToDoViewPpal";
 //import Formulario from "./ejemplos/Formulario";
+import WhiteBoard from "./projectsByMax/ToDoList/views/WhiteBoard";
 
 
 const App = () => {
   return (
     <>
       {/*<ReelCartas propsUsers={users}/>*/}
-      <ToDoViewPpal />
+      {/*<ToDoViewPpal />*/}
       {/*<Formulario />*/}
-      
-    
+      <WhiteBoard />    
     </>
   );
 };
