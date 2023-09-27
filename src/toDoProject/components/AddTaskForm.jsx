@@ -5,7 +5,7 @@ const AddTaskForm = ({onSubmitted} = (tareaNueva) => {}) => {
   //useState para una nueva tarea
   const [newTask,setNewTask] = useState({nameNewTask: ""}); //nameNewTask es el array donde se guarda la nueva tarea (id. title)
   
-   //Captura de nueva Tarea
+  //Captura de nueva Tarea
   const handleChange = (e) => {
     //desestructura el evento y captura la entrada de datos
     const {name,value} = e.target;

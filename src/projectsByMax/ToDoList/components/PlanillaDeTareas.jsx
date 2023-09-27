@@ -28,10 +28,49 @@ const PlanillaDeTareas = ({ loQueEnvio }) => {
     }
   }, [loQueEnvio]);
 
+  const handleEdit = (taskId) => {
+    // Cambiar el estado de editable a true para habilitar la edición de la tarea
+    setListaDeTareas((prevTareas) =>
+      prevTareas.map((tarea) =>
+        tarea.id === taskId ? { ...tarea, editable: true } : tarea
+      )
+    );
+  };
+
+  const handleCancel = (taskId) => {
+    // Cambiar el estado de editable a false para cancelar la edición de la tarea
+    setListaDeTareas((prevTareas) =>
+      prevTareas.map((tarea) =>
+        tarea.id === taskId ? { ...tarea, editable: false, completed:true} : tarea
+      )
+    );
+  };
+
   return (
     <div>
       {listaDeTareas.map((tarea) => (
-        <div key={tarea.id}>{tarea.title}</div>
+        <div key={tarea.id}>
+          {tarea.editable ? (
+            // Si la tarea es editable, muestra un campo de entrada para la edición
+            <input
+              type="text"
+              value={tarea.title}
+              onChange={(e) => {
+                // Actualizar el título de la tarea mientras se edita
+                setListaDeTareas((prevTareas) =>
+                  prevTareas.map((t) =>
+                    t.id === tarea.id ? { ...t, title: e.target.value } : t
+                  )
+                );
+              }}
+            />
+          ) : (
+            // Si la tarea no es editable, muestra el título de la tarea
+            tarea.title
+          )}
+          <button onClick={() => handleEdit(tarea.id)}>Editar</button>
+          <button onClick={() => handleCancel(tarea.id)}>Cancelar</button>
+        </div>
       ))}
     </div>
   );
