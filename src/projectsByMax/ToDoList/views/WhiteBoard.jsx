@@ -5,7 +5,7 @@ import PlanillaDeTareas from "../components/PlanillaDeTareas";
 
 const WhiteBoard = () => {
  //useState el estado es lo que recibo por callback y se actualiza cada vez que se recibe un nuevo iD
-  const [loQueRecibo, setLoQueRecibo] = useState(null);
+  const [loQueRecibo, setLoQueRecibo] = useState();
 
   return (
     <div>
@@ -26,11 +26,13 @@ const WhiteBoard = () => {
         />
       </section>
 
-      {
-        <section>
+      <section>
           <PlanillaDeTareas loQueEnvio={loQueRecibo} />
-        </section>
-      }
+      </section>
+      
+      <section>
+        <Titulo><p><i>-- Fin Listado de tareas --</i></p></Titulo>
+      </section>
     </div>
   );
 };

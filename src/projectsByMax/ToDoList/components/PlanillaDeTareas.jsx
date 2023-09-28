@@ -4,11 +4,6 @@ import {v4 as uuidv4 } from 'uuid';
 //Planilla de tareas es un componente padre.
 //Lista las tareas y actualiza el estado.
 const PlanillaDeTareas = ({ loQueEnvio }) => {
-  //const text = console.log(`Hola ${onListed}`);
-  /*const DATOS_MOCK = [
-    { id: 1, title: "Tarea 1", editable: false},
-    { id: 2, title: "Tarea 2", editable: false},
-  ];*/
 
   //useState actualizacion de tareas
   const [listaDeTareas, setListaDeTareas] = useState([]);
@@ -25,6 +20,7 @@ const PlanillaDeTareas = ({ loQueEnvio }) => {
       setListaDeTareas((prevTareas) => [...prevTareas, nuevaTarea]);
     }
   }, [loQueEnvio]);
+  
   const handleEdit = (taskId) => {
     // Cambiar el estado de editable a true para habilitar la edición de la tarea
     setListaDeTareas((prevTareas) =>

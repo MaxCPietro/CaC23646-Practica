@@ -1,17 +1,16 @@
-import React from 'react'
-import Hijo from './Hijo'
+import React from "react";
+import Hijo from "./Hijo";
 
 const Padre = () => {
   return (
     <div>
-        <Hijo
-         saludo={(texto) => {
-            console.log("TEXTO DESDE EL COMPO PADRE ",texto);
-         }}
-        />
-
+      <Hijo
+        saludo={(loQueReciboDelHijo) => {
+          console.log("TEXTO DESDE EL COMPO PADRE ", loQueReciboDelHijo);
+        }}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Padre
+export default Padre;
