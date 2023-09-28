@@ -9,9 +9,7 @@ const AgregarTarea = ({ onSubmitted = () => {}}) => {
   const resetForm = () => setNewTask({ nameNewTask: "" });
 
   //Captura de nueva Tarea
-  const handleChange = (e) => {
-    setNewTask(e.target.value);
-  };
+  const handleChange = (e) => { setNewTask(e.target.value)};
 
   //Agregado de Tarea Nueva al listado de tareas
   const handleSubmit = (e) => {
