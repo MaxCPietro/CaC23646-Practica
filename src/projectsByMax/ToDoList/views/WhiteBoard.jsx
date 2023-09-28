@@ -12,7 +12,7 @@ const WhiteBoard = () => {
       <section>
         <Titulo>
           <h2>Lista de Tareas</h2>
-          <p>Agregar Tarea</p>
+          <p style={{color:'blue'}}>Agregar Tarea</p>
         </Titulo>
       </section>
 
