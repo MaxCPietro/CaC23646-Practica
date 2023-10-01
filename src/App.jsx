@@ -5,10 +5,10 @@ import React from "react";
 //import ReelCartas from "./tareas/ReelCartas";
 //import ToDoViewPpal from "./toDoProject/toDoViews/ToDoViewPpal";
 //import Formulario from "./ejemplos/Formulario";
-//import WhiteBoard from "./projectsByMax/ToDoList/views/WhiteBoard";
+import WhiteBoard from "./projectsByMax/ToDoList/views/WhiteBoard";
 //import Padre from "./ejemplos/usoCallBacks/Padre"
-import Fomularios2 from "./ejemplos/Fomularios2";
-import Guardado from "./ejemplos/locaStorage";
+//import Fomularios2 from "./ejemplos/Fomularios2";
+//import Guardado from "./ejemplos/locaStorage";
 
 
 const App = () => {
@@ -17,10 +17,10 @@ const App = () => {
       {/*<ReelCartas propsUsers={users}/>*/}
       {/*<ToDoViewPpal />*/}
       {/*<Formulario />*/}
-      {/*<WhiteBoard />*/}
+      <WhiteBoard />
       {/*<Padre />*/}
       {/*<Fomularios2 />*/}
-      <Guardado />
+      {/*<Guardado />*/}
 
     </>
   );

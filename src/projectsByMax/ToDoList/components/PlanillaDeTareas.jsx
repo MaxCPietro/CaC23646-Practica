@@ -39,13 +39,19 @@ const PlanillaDeTareas = ({ loQueEnvio }) => {
     );
   };
 
-  const handleCompletar = (taskId) => {
-    // Cambiar el estado de editable a false para cancelar la edición de la tarea
+  const handleBorrar = (taskId) => {
+    // Cborra la tarea de la lista de tareas
     setListaDeTareas((prevTareas) =>
       prevTareas.filter((tarea) =>
         tarea.id !== taskId)
     );
   };
+
+  const handleCompletarTarea = (taskId) => {
+  //Cambia el Estado de Completo/incompleto de una tarea
+  setListaDeTareas((listaDeTareas) => listaDeTareas.map((tarea) =>
+    tarea.id === taskId ? {...tarea, completed:!tarea.completed} : tarea));
+  }
 
   return (
     <div>
@@ -65,14 +71,21 @@ const PlanillaDeTareas = ({ loQueEnvio }) => {
                 }}
               />
             ) : (
-              tarea.title
+              <span><b>{tarea.title}</b>
+                    <span style={{color: 'blue'}}><b>    ----     ----    </b></span>
+                    <span>{tarea.completed ? 
+                      (<span style={{color:'green'}}>completa</span>):
+                      (<span style={{color:'red'}}>incompleta</span>)}
+                    </span>
+              </span>
             )}
             {tarea.editable ? (
               <button onClick={() => handleGuardarEdit(tarea.id)}>Guardar Edit</button>
             ) : (
               <button onClick={() => handleEdit(tarea.id)}>Editar</button>
             )}
-            <button onClick={() => handleCompletar(tarea.id)}>Tarea Completada</button>
+            <button onClick={() => handleCompletarTarea(tarea.id)}>Completar Tarea</button>
+            <button onClick={() => handleBorrar(tarea.id)}>Borrar Tarea</button>
           </div>
         ))
       ) : (
