@@ -9,7 +9,11 @@ import React from "react";
 //import Padre from "./ejemplos/usoCallBacks/Padre"
 //import Fomularios2 from "./ejemplos/Fomularios2";
 //import Guardado from "./ejemplos/locaStorage";
-import Api_Gatitos from "./tareas/Api_Gatitos";
+//import Api_Gatitos from "./tareas/Api_Gatitos";
+//import Api_Gatitos_Axios from "./tareas/Api_Gatitos_Axios";
+//import CustomHooks from "./ejemplos/CustomHooks/CustomHooks";
+import VariasPromesas from "./ejemplos/VariasPromesas/VariasPromesas";
+//import AcuBilletes from "./ejemplos/Reduce/AcuBilletes";
 
 
 const App = () => {
@@ -22,7 +26,12 @@ const App = () => {
       {/*<Padre />*/}
       {/*<Fomularios2 />*/}
       {/*<Guardado />*/}
-      <Api_Gatitos />
+      {/*<Api_Gatitos />*/}
+      {/*<Api_Gatitos_Axios />*/}
+      {/*<CustomHooks />
+      <CustomHooks />*/}
+      <VariasPromesas />
+      {/*<AcuBilletes/>*/} 
 
     </>
   );
