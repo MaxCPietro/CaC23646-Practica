@@ -1,4 +1,8 @@
 import React from "react";
+import Reducers from "./ejemplos/Reducers/Reducers";
+import { RouterProvider } from "react-router-dom";
+import { AppRouter } from "./ejemplos/Pr_Routers/core/routes/AppRouters";
+import RootProviders from "./ejemplos/Pr_Routers/core/providers/RootProviders";
 
 //import Tarea1 from "./tarea/Tarea1";
 //import Contador from "./tarea/Contador";
@@ -15,9 +19,10 @@ import React from "react";
 //import CustomHooks from "./ejemplos/CustomHooks/CustomHooks";
 //import VariasPromesas from "./ejemplos/VariasPromesas/VariasPromesas";
 //import AcuBilletes from "./ejemplos/Reduce/AcuBilletes";
-import RootLayout from "./ejemplos/Contextos/RootLayout";
-import ListProducts from "./ejemplos/Contextos/List_Products/ListProducts";
-import { CartProvider } from "./ejemplos/Contextos/Contexts/CartContext";
+//import RootLayout from "./ejemplos/Contextos/RootLayout";
+//import ListProducts from "./ejemplos/Contextos/List_Products/ListProducts";
+//import { CartProvider } from "./ejemplos/Contextos/Contexts/CartContext";
+//import OptCarrito from "./ejemplos/OptCarrito/OptCarrito";
 
 const App = () => {
   //Mock con Lista de productos
@@ -64,11 +69,18 @@ const App = () => {
       {/*<VariasPromesas />*/}
       {/*<AcuBilletes/>*/}
 
-      <CartProvider>
+      {/*<CartProvider>
         <RootLayout>
           <ListProducts listaDeProductos={mockListaProducts}/>
         </RootLayout>
-      </CartProvider> 
+      </CartProvider>*/}
+      {/*<OptCarrito />*/}
+      {/*<Reducers />*/}
+      
+      <RootProviders>
+        <RouterProvider router={AppRouter}/>
+      </RootProviders>
+
     </>
   );
 };
